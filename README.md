@@ -79,8 +79,15 @@ For messaging, Socket.io handles all the real-time bridge while the Node.js serv
 
  ![image-removebg-preview (6)](https://github.com/user-attachments/assets/b746d7aa-9c19-438b-a5ed-7586a446aeb0)
 
+ 
+# Message differentiation between roles 
+
+ 
+
+The logic here is to emit back a message sent to the server with the role of the sending user. When this information/property is returned back, the frontend can easily pick this up and render the texts based on the role of the user sending. Below is a diagram to illustrate my idea 
   
 
+ ![image-removebg-preview (7)](https://github.com/user-attachments/assets/7b8c1363-954d-4200-99e8-99e71b2c6be4)
  
 
 # Scalability Approach 
