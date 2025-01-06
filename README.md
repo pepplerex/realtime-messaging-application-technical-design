@@ -21,7 +21,7 @@ A primary database for message storage (MySQL)
 Redis for handling real-time features and caching 
 
  
-
+![image-removebg-preview (1)](https://github.com/user-attachments/assets/81544793-0325-4eed-8fd1-426adfcc2393)
  
 
   
