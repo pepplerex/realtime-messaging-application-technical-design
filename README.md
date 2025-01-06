@@ -23,19 +23,12 @@ Redis for handling real-time features and caching
  
 ![image-removebg-preview (1)](https://github.com/user-attachments/assets/81544793-0325-4eed-8fd1-426adfcc2393)
  
-
-  
-
  
 
 # Database schema 
 
  
-
- 
-
- 
-
+![image-removebg-preview (2)](https://github.com/user-attachments/assets/dddccaae-6763-4736-aafb-8eb5782ae1b9)
  
 
  
@@ -75,7 +68,7 @@ To join a chat, Socket.io client sends a "join" event, and the Node.js server wo
 For messaging, Socket.io handles all the real-time bridge while the Node.js server communicates with the database and Redis to keep track of message states. 
 
   
-
+![image-removebg-preview (3)](https://github.com/user-attachments/assets/ace97679-b6b5-4c89-b911-00195569ce41)
  
 
   
@@ -84,7 +77,7 @@ For messaging, Socket.io handles all the real-time bridge while the Node.js serv
 
  
 
- 
+ ![image-removebg-preview (6)](https://github.com/user-attachments/assets/b746d7aa-9c19-438b-a5ed-7586a446aeb0)
 
   
 
