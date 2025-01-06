@@ -1,80 +1,125 @@
-# Real-time Messaging System
+# Real-time Messaging System Technical Documentation 
 
-A modern real-time messaging system built with Node.js, Socket.io, Redis, and TypeScript.
+ 
 
-## System Architecture Overview
+# Presented by: Rex Pepple 
 
-This real-time messaging system is built using modern technologies:
-- Node.js for server logic
-- Socket.io for real-time communication
-- Redis for caching
-- TypeScript for type safety
-- MySQL for primary data storage
+ 
 
-### Core Components
+# System Architecture Overview 
 
-1. Single backend server handling both WebSocket connections and HTTP requests
-2. Primary database for message storage (MySQL)
-3. Redis for handling real-time features and caching
+In this document, I will outline the technical architecture and design decisions for my real-time messaging system. This system is built using a modern technology which include Node.js for the server logic, socket.io as bridge for the real-time communication, Redis for caching and TypeScript for type safety across the entire application. 
 
-## Implementation Details
+ 
 
-### Real-Time Communication
+I'm keeping the architecture simple and with three main components: 
 
-The system utilizes Socket.io and Node.js for real-time communication. The workflow is as follows:
+A single backend server handling both WebSocket connections and HTTP requests 
 
-1. Socket.io client initiates connection with authentication token
-2. Redis validates and manages session information
-3. Users join chat channels through Socket.io "join" events
-4. Node.js server coordinates with Redis for channel management
-5. Real-time messaging is handled through Socket.io while Node.js manages database and Redis state updates
+A primary database for message storage (MySQL) 
 
-### Scalability Approach
+Redis for handling real-time features and caching 
 
-The system implements a straightforward scaling strategy:
-- Horizontal scaling of the server when needed
-- Redis for managing WebSocket sessions
-- Database indexing for faster queries
+ 
 
-### Error Handling
+ 
 
-The system implements basic error handling for:
-- Connection drops
-- Message delivery failures
-- Database transaction failures
+  
 
-### Future Considerations
+ 
 
-Planned improvements include:
-- Message search functionality
-- File sharing capabilities (images)
-- Message reactions
+# Database schema 
 
-## Getting Started
+ 
 
-1. Install dependencies:
-```bash
-npm install
-```
+ 
 
-2. Configure environment variables:
-```bash
-cp .env.example .env
-```
+ 
 
-3. Start the server:
-```bash
-npm run start
-```
+ 
 
-## Technology Stack
+ 
 
-- Node.js
-- TypeScript
-- Socket.io
-- Redis
-- MySQL
+ 
 
-## Author
+ 
 
-Rex Pepple
+ 
+
+ 
+
+ 
+
+  
+
+# Real-Time Implementation 
+
+  
+
+The real-time chat system is  built using Socket.io and Node.js. 
+
+ 
+
+# Here’s How It Works 
+
+  
+
+When someone wants to chat, Socket.io client first says hi to my Node.js server with their auth token. then we check in with Redis to keep track of who's who in a session. Once Redis gives the thumbs up, we're good to go! 
+
+  
+
+To join a chat, Socket.io client sends a "join" event, and the Node.js server works with Redis to add them to the right channel. 
+
+  
+
+For messaging, Socket.io handles all the real-time bridge while the Node.js server communicates with the database and Redis to keep track of message states. 
+
+  
+
+ 
+
+  
+
+# Message States 
+
+ 
+
+ 
+
+  
+
+ 
+
+# Scalability Approach 
+
+ 
+
+I'm keeping the scaling strategy simple: 
+
+- Redis for managing WebSocket sessions 
+
+- Database indexing for faster queries 
+
+  
+
+# Error Handling 
+
+Basic error handling covers: 
+
+- Connection drops 
+
+- Message delivery failures 
+
+- Database transaction failures 
+
+   
+
+# Future Considerations 
+
+Core improvements I'd consider: 
+
+- Message search 
+
+- File sharing (images) 
+
+- Message reactions 
